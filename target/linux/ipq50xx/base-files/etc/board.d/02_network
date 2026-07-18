@@ -6,6 +6,10 @@ ipq50xx_setup_interfaces()
 {
 	local board="$1"
 	case $board in
+		ctcc,cmlyq706x)
+			ucidef_add_switch "switch1" "6u@eth1" "2:lan:1" "3:lan:2" "4:lan:3"
+			ucidef_set_interfaces_lan_wan "eth1" "eth0"
+			;;
 		redmi,ax3000)
 			ucidef_add_switch "switch1" \
 				"6u@eth1" "5u@eth0" \

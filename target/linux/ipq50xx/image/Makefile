@@ -51,6 +51,26 @@ define Device/cmcc_rax3000q
 endef
 TARGET_DEVICES += cmcc_rax3000q
 
+define Device/ctcc_cmlyq706x
+  $(call Device/FitImage)
+  $(call Device/UbiFit)
+  SOC := ipq5000
+  DEVICE_VENDOR := CTCC
+  DEVICE_MODEL := CMLYQ706X
+  DEVICE_ALT0_VENDOR := CUCC
+  DEVICE_ALT0_MODEL := VS010
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  DEVICE_DTS_CONFIG := config@mp02.1
+  IMAGES := nand-factory.ubi
+  DEVICE_PACKAGES := \
+	ATH11K_MEM_PROFILE_256M \
+	ath11k-firmware-ipq5018 \
+	ath11k-firmware-qcn6122 \
+	ipq-wifi-ctcc_cmlyq706x
+endef
+TARGET_DEVICES += ctcc_cmlyq706x
+
 define Device/redmi_ax3000
   $(call Device/FitImage)
   $(call Device/UbiFit)

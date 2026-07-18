@@ -19,6 +19,9 @@ board_config_update
 board=$(board_name)
 
 case $board in
+	ctcc,cmlyq706x)
+		ucidef_set_led_netdev "wan" "WAN" "green:system" "eth0"
+		;;
 	redmi,ax3000)
 		ucidef_set_led_switch "wan" "WAN" "blue:internet" "switch1" "$( bits 4 )"
 		;;
