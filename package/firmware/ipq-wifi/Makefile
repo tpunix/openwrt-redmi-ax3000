@@ -145,7 +145,7 @@ $(eval $(call generate-ipq-wifi-package,plasmacloud_pa1200,Plasma Cloud PA1200))
 $(eval $(call generate-ipq-wifi-package,plasmacloud_pa2200,Plasma Cloud PA2200))
 $(eval $(call generate-ipq-wifi-package,qxwlan_e2600ac,Qxwlan E2600AC))
 $(eval $(call generate-ipq-wifi-package,redmi_ax3000,Redmi AX3000))
-$(eval $(call generate-ipq-wifi-package,ctcc_cmlyq706x,ChinaNet CMLYQ706X))
+$(eval $(call generate-ipq-wifi-package,ctcc_cmlyq706x,CTCC CMLYQ706X))
 $(eval $(call generate-ipq-wifi-package,xiaomi_cr881x,Xiaomi CR881x))
 
 $(foreach PACKAGE,$(ALLWIFIPACKAGES),$(eval $(call BuildPackage,$(PACKAGE))))
